@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+".\objects\ccan.o"
+".\objects\timer.o"
+".\objects\stm32f10x_it.o"
+".\objects\main.o"
+".\objects\adc.o"
+".\objects\dht11.o"
+".\objects\ccanconsole.o"
+".\objects\console.o"
+".\objects\rtt_vsnprintf.o"
+".\objects\segger_rtt.o"
+".\objects\misc.o"
+".\objects\stm32f10x_adc.o"
+".\objects\stm32f10x_can.o"
+".\objects\stm32f10x_crc.o"
+".\objects\stm32f10x_dma.o"
+".\objects\stm32f10x_exti.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_tim.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\SubTest.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\SubTest.map" -o .\Objects\SubTest.axf
