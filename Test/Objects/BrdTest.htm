@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\BrdTest.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\BrdTest.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed Mar 29 18:58:09 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed Apr 05 18:40:32 2017
 <BR><P>
 <H3>Maximum Stack Usage =        180 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -590,8 +590,8 @@ Global Symbols
 <P><STRONG><a name="[e3]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCanRouter::CCanRouter(CAN_TypeDef*, CanTxMsg*, unsigned short, unsigned)
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCanRouter::CCanRouter(CAN_TypeDef*, CanTxMsg*, unsigned short, unsigned)
 </UL>
 
 <P><STRONG><a name="[128]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
@@ -629,10 +629,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_get_globals
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_exceptions_buffer_init
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_get_globals
 </UL>
 
 <P><STRONG><a name="[82]"></a>__cxa_finalize</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, cxa_finalize.o(.text))
@@ -716,8 +716,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = std::terminate() &rArr; __cxa_get_globals &rArr; __ARM_exceptions_buffer_init &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_get_globals
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_get_globals
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_new_handler()
 </UL>
@@ -1294,10 +1294,10 @@ Global Symbols
 <P><STRONG><a name="[dd]"></a>CCanRouter::InitCan()</STRONG> (Thumb, 218 bytes, Stack size 40 bytes, ccan.o(i._ZN10CCanRouter7InitCanEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = CCanRouter::InitCan() &rArr; CAN_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Init
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Init
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_FilterInit
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_FIFORelease
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1609,9 +1609,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[e5]"></a>ringque&lang;CCanRxMailbox::MsgData&rang;::elemsInQue() const</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, ccan.o(t._ZNK7ringqueIN13CCanRxMailbox7MsgDataEE10elemsInQueEv))
-<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ringque&lang;CCanRxMailbox::MsgData&rang;::pop()
+<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCanRxMailbox::getMsg(CanRxMsg*)
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ringque&lang;CCanRxMailbox::MsgData&rang;::pop()
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCanRxMailbox::pushMsg(const CanRxMsg&)
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCanRxMailbox::getMsg(CanRxMsg*)
 </UL>
 
 <P><STRONG><a name="[7d]"></a>_fp_init</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, fpinit.o(x$fpl$fpinit))
